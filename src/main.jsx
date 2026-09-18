@@ -157,13 +157,13 @@ function App() {
         <button className="mobile-menu" onClick={() => setMenuOpen(v => !v)} aria-label="Toggle menu">
           <Icon name={menuOpen ? 'close' : 'menu'} />
         </button>
-        <button className="brand" onClick={() => scrollTo('top')} aria-label="FrostyGoodness home">
+        <button className="brand" onClick={() => scrollTo('top')} aria-label="Fruit Vault home">
           <span className="brand-mark"><Icon name="leaf" size={29} /></span>
-          <span><b>Frosty</b><strong>Goodness</strong><small>PREMIUM FROZEN FRUITS</small></span>
+          <span><b>Fruit</b><strong>Vault</strong><small>PREMIUM FROZEN FRUITS</small></span>
         </button>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
           <button onClick={() => scrollTo('shop')}>Shop</button>
-          <button onClick={() => scrollTo('why')}>Why FrostyGoodness</button>
+          <button onClick={() => scrollTo('why')}>Why Fruit Vault</button>
           <button onClick={() => scrollTo('story')}>Our Story</button>
           <button onClick={() => scrollTo('contact')}>Contact</button>
         </nav>
@@ -187,7 +187,7 @@ function App() {
           <div className="hero-visual">
             <div className="hero-glow"></div>
             <div className="poster-frame">
-              <img src="/frostygoodness-poster.png" alt="FrostyGoodness premium mixed frozen fruits" />
+              <img src="/frostygoodness-poster.png" alt="Fruit Vault premium mixed frozen fruits" />
             </div>
             <div className="floating-card quality-card"><span className="mini-icon"><Icon name="leaf" size={18} /></span><div><b>Peak freshness</b><small>Frozen when fruit is at its best</small></div></div>
             <div className="floating-card made-card"><b>100%</b><span>FRUIT<br />GOODNESS</span></div>
@@ -199,7 +199,7 @@ function App() {
         </section>
 
         <section className="intro section-pad">
-          <div className="section-kicker">THE FROSTYGOODNESS STANDARD</div>
+          <div className="section-kicker">THE FRUIT VAULT STANDARD</div>
           <h2>Good fruit deserves<br /><em>great treatment.</em></h2>
           <p>We choose vibrant fruit, prepare it simply, then freeze it to lock in the colour, texture and flavour you love. No complicated ingredients. No compromise on taste.</p>
         </section>
@@ -230,12 +230,12 @@ function App() {
         </section>
 
         <section className="story section-pad" id="story">
-          <div className="story-card"><div className="section-kicker">OUR LITTLE PHILOSOPHY</div><h2>More fruit.<br /><em>Less fuss.</em></h2><p>FrostyGoodness was imagined around a simple idea: make genuinely good fruit easier to enjoy, even when the season has moved on. We believe the freezer can be a place for freshness—not a place where flavour goes to disappear.</p><div className="signature">FrostyGoodness <span>•</span> Since 2026</div></div>
+          <div className="story-card"><div className="section-kicker">OUR LITTLE PHILOSOPHY</div><h2>More fruit.<br /><em>Less fuss.</em></h2><p>Fruit Vault was imagined around a simple idea: make genuinely good fruit easier to enjoy, even when the season has moved on. We believe the freezer can be a place for freshness—not a place where flavour goes to disappear.</p><div className="signature">Fruit Vault <span>•</span> Since 2026</div></div>
           <div className="story-orbit"><div className="orbit-ring"></div><div className="orbit-copy"><span>REAL FRUITS</span><b>PURE<br />GOODNESS</b><span>ALL YEAR ROUND</span></div></div>
         </section>
 
         <section className="cta section-pad" id="contact">
-          <div className="cta-inner"><div><div className="section-kicker">BRING GOODNESS HOME</div><h2>Your freezer just found<br /><em>its new favourite.</em></h2><p>Want to stock FrostyGoodness for home, cafés, restaurants or retail? Say hello and let's talk.</p></div><form onSubmit={submitInquiry}>
+          <div className="cta-inner"><div><div className="section-kicker">BRING GOODNESS HOME</div><h2>Your freezer just found<br /><em>its new favourite.</em></h2><p>Want to stock Fruit Vault for home, cafés, restaurants or retail? Say hello and let's talk.</p></div><form onSubmit={submitInquiry}>
   <input
     type="text"
     name="name"
@@ -264,7 +264,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer"><div className="footer-main"><div className="footer-brand"><button className="brand footer-logo" onClick={() => scrollTo('top')}><span className="brand-mark"><Icon name="leaf" size={26} /></span><span><b>Frosty</b><strong>Goodness</strong><small>PREMIUM FROZEN FRUITS</small></span></button><p>Real fruits. Pure goodness. All year round.</p></div><div><h4>Explore</h4><button onClick={() => scrollTo('shop')}>Shop fruits</button><button onClick={() => scrollTo('why')}>Our standard</button><button onClick={() => scrollTo('story')}>Our story</button></div><div><h4>Contact</h4><a href="tel:+919876543210"><Icon name="phone" size={16} /> +91 98765 43210</a><a href="mailto:hello@frostygoodness.in"><Icon name="mail" size={16} /> hello@frostygoodness.in</a><span><span className="pin">⌖</span> Mumbai, India</span></div><div><h4>Follow</h4><a href="#instagram"><Icon name="instagram" size={18} /> Instagram</a><span>Fresh drops & fruit ideas</span></div></div><div className="footer-bottom"><span>© 2026 FrostyGoodness. All rights reserved.</span><span>Made with fruit & good intent.</span></div></footer>
+      <footer className="footer"><div className="footer-main"><div className="footer-brand"><button className="brand footer-logo" onClick={() => scrollTo('top')} aria-label="Fruit Vault home"><span className="brand-mark"><Icon name="leaf" size={26} /></span><span><b>Fruit</b><strong>Vault</strong><small>PREMIUM FROZEN FRUITS</small></span></button><p>Real fruits. Pure goodness. All year round.</p></div><div><h4>Explore</h4><button onClick={() => scrollTo('shop')}>Shop fruits</button><button onClick={() => scrollTo('why')}>Our standard</button><button onClick={() => scrollTo('story')}>Our story</button></div><div><h4>Contact</h4><a href="tel:+919876543210"><Icon name="phone" size={16} /> +91 98765 43210</a><a href="mailto:hello@fruitvault.in"><Icon name="mail" size={16} /> hello@fruitvault.in</a><span><span className="pin">⌖</span> Mumbai, India</span></div><div><h4>Follow</h4><a href="#instagram"><Icon name="instagram" size={18} /> Instagram</a><span>Fresh drops & fruit ideas</span></div></div><div className="footer-bottom"><span>© 2026 Fruit Vault. All rights reserved.</span><span>Made with fruit & good intent.</span></div></footer>
 
       {toast && <div className="toast"><span>✓</span>{toast}</div>}
     </div>
