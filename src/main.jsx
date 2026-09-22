@@ -158,8 +158,7 @@ function App() {
           <Icon name={menuOpen ? 'close' : 'menu'} />
         </button>
         <button className="brand" onClick={() => scrollTo('top')} aria-label="Fruit Vault home">
-          <span className="brand-mark"><Icon name="leaf" size={29} /></span>
-          <span><b>Fruit</b><strong>Vault</strong><small>PREMIUM FROZEN FRUITS</small></span>
+          <img src="/logo-transparent.png" alt="Fruit Vault — Premium Frozen Fruits" className="brand-logo" />
         </button>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
           <button onClick={() => scrollTo('shop')}>Shop</button>
@@ -264,7 +263,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer"><div className="footer-main"><div className="footer-brand"><button className="brand footer-logo" onClick={() => scrollTo('top')} aria-label="Fruit Vault home"><span className="brand-mark"><Icon name="leaf" size={26} /></span><span><b>Fruit</b><strong>Vault</strong><small>PREMIUM FROZEN FRUITS</small></span></button><p>Real fruits. Pure goodness. All year round.</p></div><div><h4>Explore</h4><button onClick={() => scrollTo('shop')}>Shop fruits</button><button onClick={() => scrollTo('why')}>Our standard</button><button onClick={() => scrollTo('story')}>Our story</button></div><div><h4>Contact</h4><a href="tel:+919876543210"><Icon name="phone" size={16} /> +91 98765 43210</a><a href="mailto:hello@fruitvault.in"><Icon name="mail" size={16} /> hello@fruitvault.in</a><span><span className="pin">⌖</span> Mumbai, India</span></div><div><h4>Follow</h4><a href="#instagram"><Icon name="instagram" size={18} /> Instagram</a><span>Fresh drops & fruit ideas</span></div></div><div className="footer-bottom"><span>© 2026 Fruit Vault. All rights reserved.</span><span>Made with fruit & good intent.</span></div></footer>
+      <footer className="footer"><div className="footer-main"><div className="footer-brand"><button className="brand footer-logo" onClick={() => scrollTo('top')} aria-label="Fruit Vault home"><span className="brand-mark"><img src="/logo-icon.png" alt="Fruit Vault" className="brand-mark-img" /></span><span><b>Fruit</b><strong>Vault</strong><small>PREMIUM FROZEN FRUITS</small></span></button><p>Real fruits. Pure goodness. All year round.</p></div><div><h4>Explore</h4><button onClick={() => scrollTo('shop')}>Shop fruits</button><button onClick={() => scrollTo('why')}>Our standard</button><button onClick={() => scrollTo('story')}>Our story</button></div><div><h4>Contact</h4><a href="tel:+919876543210"><Icon name="phone" size={16} /> +91 98765 43210</a><a href="mailto:hello@fruitvault.in"><Icon name="mail" size={16} /> hello@fruitvault.in</a><span><span className="pin">⌖</span> Mumbai, India</span></div><div><h4>Follow</h4><a href="#instagram"><Icon name="instagram" size={18} /> Instagram</a><span>Fresh drops & fruit ideas</span></div></div><div className="footer-bottom"><span>© 2026 Fruit Vault. All rights reserved.</span><span>Made with fruit & good intent.</span></div></footer>
 
       {toast && <div className="toast"><span>✓</span>{toast}</div>}
     </div>
