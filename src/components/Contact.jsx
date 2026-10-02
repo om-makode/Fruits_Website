@@ -32,46 +32,35 @@ export default function Contact() {
 
     const formData = new FormData();
 
+    formData.append("formType", "inquiry");
+    formData.append("enquiryType", "General Inquiry");
+    formData.append("inquiryType", "General Inquiry");
+    formData.append("timestamp", new Date().toISOString());
     formData.append("name", form.elements.name.value.trim());
     formData.append("email", form.elements.email.value.trim());
     formData.append("message", form.elements.message.value.trim());
 
-    const iframe = document.createElement("iframe");
-    iframe.name = "hidden_iframe";
-    iframe.style.display = "none";
-
-    document.body.appendChild(iframe);
-
-    const submitForm = document.createElement("form");
-
-    submitForm.action =
+    const scriptUrl =
       import.meta.env.VITE_GOOGLE_SCRIPT_URL ||
       "https://script.google.com/macros/s/AKfycbzw5MP01KrdHkUKYvObg4zpHL01T6mI_qxbLy9JlYyWcbc21Yov1vg5i7IJI42PIPbnqA/exec";
 
-    submitForm.method = "POST";
-    submitForm.target = "hidden_iframe";
-    submitForm.style.display = "none";
-
+    // Send a single network dispatch via fetch
+    const formParams = new URLSearchParams();
     formData.forEach((value, key) => {
-      const input = document.createElement("input");
-      input.type = "hidden";
-      input.name = key;
-      input.value = value;
-      submitForm.appendChild(input);
+      formParams.append(key, value);
     });
 
-    document.body.appendChild(submitForm);
-
-    submitForm.submit();
+    fetch(scriptUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formParams.toString()
+    }).catch(() => {});
 
     setToast("Thanks! We will get back to you soon.");
-
     form.reset();
-
-    setTimeout(() => {
-      document.body.removeChild(submitForm);
-      document.body.removeChild(iframe);
-    }, 3000);
   };
 
   return (
